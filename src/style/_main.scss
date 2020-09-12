@@ -4,45 +4,52 @@
   justify-content: center;
   align-items: center;
 
-  &-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  &-container {
+    @extend .container-items-flex;
     border: 1px solid $border-color;
     border-radius: $border-radius-base;
-    padding: 30px;
-
-    * {
-      @extend .main-items;
-    }
+    padding: $container-padding;
 
     &-title {
-      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 50px;
     }
 
-    &-input {
-      outline-style: none;
-      background: transparent;
-      border: 0px;
-      border-bottom: 1px solid $border-color;
-    }
+    &-form {
+      @extend .container-items-flex;
 
-    &-forgotten-password {
-      text-decoration: none;
-      color: $primary-color;
-    }
+      * {
+        @extend .main-items;
+      }
 
-    &-login {
-      @include btn-variant($primary-color, transparent, 100%);
-    }
+      &-title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-    &-register {
-      @include btn-variant($white, $primary-color, 100%);
-    }
+      &-input {
+        outline-style: none;
+        background: transparent;
+        border: 0px;
+        border-bottom: 1px solid $border-color;
+      }
 
-    span {
-      text-align: center;
+      &-forgotten-password {
+        text-decoration: none;
+        color: $primary-color;
+      }
+
+      &-login {
+        @include btn-variant($primary-color, transparent, 100%);
+      }
+
+      &-register {
+        @include btn-variant($white, $primary-color, 100%);
+      }
+
+      span {
+        text-align: center;
+      }
     }
   }
 }
@@ -50,4 +57,11 @@
 .main-items {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.container-items-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
