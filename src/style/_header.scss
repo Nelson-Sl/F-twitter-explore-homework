@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+
+  &-title {
+    margin: $header-item-margin;
+  }
+
+  &-nav {
+    margin: $header-item-margin;
+    display: flex;
+
+    &-register {
+      @include btn-variant($white, $primary-color, $header-button-width);
+    }
+
+    &-login {
+      @include btn-variant($primary-color, transparent, $header-button-width);
+    }
+  }
+}
