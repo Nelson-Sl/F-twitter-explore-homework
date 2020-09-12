@@ -11,6 +11,43 @@
     align-items: center;
     border: 1px solid $border-color;
     border-radius: $border-radius-base;
-    padding: 50px;
+    padding: 30px;
+
+    * {
+      @extend .main-items;
+    }
+
+    &-title {
+      text-align: center;
+    }
+
+    &-input {
+      outline-style: none;
+      background: transparent;
+      border: 0px;
+      border-bottom: 1px solid $border-color;
+    }
+
+    &-forgotten-password {
+      text-decoration: none;
+      color: $primary-color;
+    }
+
+    &-login {
+      @include btn-variant($primary-color, transparent, 100%);
+    }
+
+    &-register {
+      @include btn-variant($white, $primary-color, 100%);
+    }
+
+    span {
+      text-align: center;
+    }
   }
+}
+
+.main-items {
+  width: 100%;
+  margin-bottom: 10px;
 }
