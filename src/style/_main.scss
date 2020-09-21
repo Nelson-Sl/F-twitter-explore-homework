@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  //TODO feedback: 虽然SASS提供&-这样的语法，但是项目上我们几乎不会去使用，因为它会造成代码不好读，很难维护，所以尽量少用，甚至不用
   &-container {
     @extend .container-items-flex;
     border: 1px solid $border-color;
